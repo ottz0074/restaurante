@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Streetbrush';
+    src: url(Streetbrush.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilker';
+    src: url(Gliker-RegularCondensed.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.logo img{  
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+
+#menuinicio ul{
+    display:flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 1px;
+    justify-content: end;
+    padding: 40px;
+    cursor:crosshair;
+    padding-left: 30px;
+}
+#menuinicio li:hover{
+    color:#9c1917;
+    position: relative;
+}
+#menuinicio li::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height: 3px;
+    background-color: #9c1917;
+    transition: width 0.3s ease;
+}
+#menuinicio li:hover::after{
+    width: 100%;
+}
+header{
+    display: flex;
+    font-family: 'Streetbrush', cursive;
+    color: #d8c7ab;
+    background-color: black;
+    font-size: 34px;
+    justify-content: space-between;
+    align-items: center;
+    height:130px;
+    position: sticky;
+    top: 0;
+}
+body{
+height: auto;
+width: auto;
+margin: 0px;
+background-image: url(burg.png);
+background-position-y: 130px;
+background-size: cover;
+}
+.inicio{
+    color:white;
+    display:block;
+    text-align: center;
+}
+.inicio h1{
+    margin-block-start:  0px; ;
+    margin-block-end: 0px;
+    margin-top: -170px;
+    font-family: 'Gilker';
+    font-size: 60px;
+    color: #d8c7ab;
+    margin-right: 400px;
+}
+.inicio p{
+    color: rgb(253, 248, 224);
+    font-family: 'Gilker';
+    font-size: 30px;
+    margin-right: 400px;
+    margin-top: 12px;
+}
+.inicio img{
+   width: 900px;
+   margin-right: 450px;
+   margin-top: -110px;
+}
+
+hr{
+    margin: -30px;
+    color: #d8c7ab;
+    size: 0.3px;
+
+}
+.destaque{
+    color:#9c1917
+}
+.btncardapio{
+    background-image: url("faixabotao-bg.png");
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+    width: 450px;
+    height: 100px;
+
+    border: none;
+    background-color: transparent;
+    font-family:'Streetbrush', cursive ;
+    font-size: 40px;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin-left: 67%;
+    margin-top: -100px;
+}
+.btncardapio:hover{
+    transform: scale(1.03);
+}
+.cardapio{
+    border: 20px;
+    color:white;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.cardapio ul{
+      display:flex;
+        gap: 90px;
+        list-style-type: none;
+        margin: 1px;
+        padding-right: 25%;
+        padding-left:25%;
+}
+
+.titulocardapio{
+    font-family:'Streetbrush', cursive ;
+    font-size: 60px;
+    display: inline-flex    ;
+    background-image: url("faixabotao-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 25px 80px;
+    justify-content: center;
+    align-items: center ;
+}
+.item{
+    border: 10px;
+    
+}
