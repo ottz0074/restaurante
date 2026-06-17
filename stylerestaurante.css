@@ -156,11 +156,17 @@
         transform: scale(1.03);
     }
     .cardapio{
-        border: 20px;
+        margin-top: -80px;
         color:white;
-        border-radius: 25%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        padding-top: 50px;
+        background-image: url(fundo1.png);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
     }
 
 .cardapio ul{
@@ -174,15 +180,17 @@
 
 .titulocardapio{
     font-family:'Streetbrush', cursive ;
-    font-size: 60px;
+    font-size: 70px;
     display: inline-flex    ;
     background-image: url("faixabotao-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    padding: 25px 80px;
+    padding: 35px 100px;
     justify-content: center;
     align-items: center ;
+    margin: 0px;
+    margin-bottom: -30px;
 }
     
 .cardapioprincipal{
@@ -202,4 +210,13 @@
     padding: 20px;
     text-align: center;
     transition: 0,3s ease;
+    font-family: 'Gilker';
+    color: #d8c7ab;
+}
+.categoria{
+    font-family: 'Gilker';
+    color: #9c1917;
+    font-size: 50px;
+    text-align: center;
+    margin: 60px 0 30px 0;
 }
