@@ -20,6 +20,8 @@
         height: 150px;
         margin-top: 0px;
         padding-top: 0px;
+        position: relative;
+        top: 15px;
     }
     .logo img{  
         width: 150px;
@@ -28,7 +30,36 @@
         padding: 0px;
         padding-left: 10px;
     }
+    #burgerinicial{
+    position: absolute;
 
+    width: 550px;
+
+    right: -450px;
+    top: 190px;
+
+    z-index: 1;
+    pointer-events: none;
+}
+    #respingos{
+        position: absolute;
+        width: 300px;
+
+        left:0px;
+        top:460px;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    #cavera{
+        position: absolute;
+        width: 700px;
+
+        left:-350px;
+        top:150px;
+        z-index: 1;
+        pointer-events: none;
+    }
 
     #menuinicio ul{
         display:flex;
@@ -71,29 +102,42 @@
         display: flex;
         font-family: 'Streetbrush', cursive;
         color: #d8c7ab;
-        background-color: black;
+        background-color: rgb(2, 2, 2);
         font-size: 34px;
         justify-content: space-between;
         align-items: center;
-        height:130px;
+        height:100px;
         position: sticky;
+        top: 0px;
+        z-index: 1000;  
         top: 0;
-    }
+        left: 0;
+        width: 100%;
+         background: rgba(0,0,0,.75);
+        backdrop-filter: blur(8px);
+}
+
     body{
     height: auto;
     width: auto;
     margin: 0px;
     background-color: black;
+    background-image: url(fundo1.png);
+    background-size:auto;
+    background-position: center top;
+    background-repeat:no-repeat;
+    color: white;
     }
     .inicio{
         color:white;
         display:block;
         text-align: center; 
         min-height: calc(100vh - 130px);
-        background-image: url(burg.png);
-        background-size: cover;
+        background-image: url(fundo1.png);
+        background-size:auto;
         background-position: center top;
-        background-repeat: no-repeat;
+        background-repeat:no-repeat;
+       
     }
     .inicio h1{
         margin-block-start:  0px; ;
@@ -115,6 +159,7 @@
     width: 900px;
     margin-right: 450px;
     margin-top: -80px;
+    pointer-events: none;
     }
 
     hr{
@@ -134,6 +179,7 @@
         text-decoration: none;
         width: 450px;
         height: 100px;
+        z-index: 10;
 
         border: none;
         background-color: transparent;
@@ -155,30 +201,9 @@
     .btncardapio:hover{
         transform: scale(1.03);
     }
-    .cardapio{
-        margin-top: -80px;
-        color:white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        padding-top: 50px;
-        background-image: url(fundo1.png);
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-    }
 
-.cardapio ul{
-    display:flex;
-    gap: 90px;
-    list-style-type: none;
-    margin: 1px;
-    padding-right: 25%;
-    padding-left:25%;
-}
 
-.titulocardapio{
+.partes{
     font-family:'Streetbrush', cursive ;
     font-size: 70px;
     display: inline-flex    ;
@@ -191,32 +216,385 @@
     align-items: center ;
     margin: 0px;
     margin-bottom: -30px;
-}
-    
-.cardapioprincipal{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1400px;
-    margin: 50px auto;
+    color: white;
+
 }
 
-.item{
-    width: 320px;
+.sobrenos {
+    background-image: url("fundo1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 8%;
+    color: #d8c7ab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulosobre {
+    font-family: 'Streetbrush', cursive;
+    font-size: 70px;
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+    display: inline-flex;
+    background-image: url("faixabotao-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 35px 100px;
+    justify-content: center;
+    align-items: center ;
+    margin: 0px;
+    margin-bottom: -30px;
+}
+
+.conteudosobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.imagensobre img {
+    width: 420px;
+    border-radius: 25px;
+    border: 2px solid #9c1917;
+    box-shadow: 0 0 25px rgba(156, 25, 23, 0.5);
+    z-index: 2;
+
+}
+
+.textosobre {
+    max-width: 600px;
+    font-family: 'Gilker';
+}
+
+.textosobre h3 {
+    font-size: 45px;
+    color: #9c1917;
+    margin-bottom: 25px;
+}
+
+.textosobre p {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.diferenciais {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.card {
+    width: 280px;
     background-color: #111;
     border: 2px solid #9c1917;
-    border-radius:20px;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 30px 20px;
     text-align: center;
-    transition: 0,3s ease;
     font-family: 'Gilker';
     color: #d8c7ab;
+    transition: 0.3s ease;
+    z-index: 1;
 }
-.categoria{
-    font-family: 'Gilker';
+
+.card i {
+    font-size: 45px;
     color: #9c1917;
-    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(156, 25, 23, 0.6);
+}
+
+.contato{
+    background-image: url("fundo1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 8%;
+    color: #d8c7ab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulocontato{
+    font-family: 'Streetbrush', cursive;
+    font-size: 70px;
     text-align: center;
-    margin: 60px 0 30px 0;
+    color: white;
+    margin-bottom: 60px;
+    display: inline-flex;
+    background-image: url("faixabotao-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 35px 100px;
+    justify-content: center;
+    align-items: center ;
+    margin: 0px;
+    margin-bottom: -30px;
+}
+
+
+#respingos1{
+        position: absolute;
+        width: 400px;
+
+        left:890px;
+        top:740px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+#respingos2{
+        position: absolute;
+        width: 190px;
+        left:140px;
+        top:1290px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+#cavera1{
+    position: absolute;
+        width: 600px;
+
+        left:1060px;
+        top:1300px;
+        z-index: 1;
+        pointer-events: none;
+}
+
+.contato{
+    background-image: url("fundo1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 100px 0 80px 0;
+
+    color: #d8c7ab;
+    text-align: center;
+}
+
+.titulocontato{
+    font-family: 'Streetbrush', cursive;
+    font-size: 70px;
+    color: white;
+
+    display: flex;
+    width: fit-content;
+
+    background-image: url("faixabotao-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    padding: 35px 100px;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 30px auto;
+}
+
+.frasecontato{
+    font-family: 'Gilker';
+    font-size: 32px;
+    color: white;
+
+    margin-bottom: 60px;
+}
+
+.conteudocontato{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    width: calc(100% - 200px);
+    max-width: 1700px;
+
+    margin: auto;
+
+    gap: 60px;
+}
+
+.ladoinfo{
+    flex: 1;
+
+    background-color: #111;
+    border: 2px solid #9c1917;
+    border-radius: 20px;
+
+    padding: 45px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infocontato{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    text-align: left;
+
+    font-family: 'Gilker';
+    font-size: 25px;
+}
+
+.infocontato i{
+    color: #9c1917;
+    width: 35px;
+}
+
+.redescontato{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.redescontato a{
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #9c1917;
+    border-radius: 50%;
+
+    color: #d8c7ab;
+    text-decoration: none;
+    font-size: 30px;
+
+    transition: .3s;
+}
+
+.redescontato a:hover{
+    background-color: #9c1917;
+    color: white;
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 0 20px rgba(156,25,23,.6);
+}
+
+.mapa{
+    flex: 1.2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa iframe{
+    width: 100%;
+    height: 430px;
+
+    border: 3px solid #9c1917;
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(156,25,23,.5);
+}
+
+.btnpedido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: 35px;
+
+    font-family: 'Streetbrush', cursive;
+    font-size: 60px;
+
+    color: white;
+    text-decoration: none;
+
+    background-image: url("faixabotao-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    padding: 30px 90px;
+
+    transition: .3s;
+}
+
+.btnpedido:hover{
+    transform: scale(1.05);
+}
+
+.rodape{
+    background-color: #050505;
+
+    border-top: 2px solid #9c1917;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+.rodape img{
+    width: 120px;
+
+    margin-bottom: 15px;
+}
+
+.rodape p{
+    font-family: 'Gilker';
+    color: #d8c7ab;
+    font-size: 18px;
+}
+#respingos3{
+        position: absolute;
+        width: 200px;
+        left:690px;
+        top:2770px;
+        z-index: 0;
+        pointer-events: none;
+    }
+#caveracoroa{
+    position: absolute;
+        width: 400px;
+        left:10px;
+        top:2000px;
+        z-index: 0;
+        pointer-events: none;
+}
+#respingos4{
+     position: absolute;
+        width: 350px;
+        left:1100px;
+        top:1750px;
+        z-index: 0;
+        pointer-events: none;
 }
